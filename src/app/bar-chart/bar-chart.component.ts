@@ -31,6 +31,8 @@ export class BarChartComponent implements OnInit {
       .attr("x", (d, i) => (100 * i))
       .attr("y", 0)
       .attr('fill', 'red');
+    
+    groups.select('rect').classed("rect__blue", true);
 
     groups.append('text')
       .text(d => d)
@@ -38,7 +40,8 @@ export class BarChartComponent implements OnInit {
       .attr("y", 12)
       .attr("text-anchor", "end")
       .style("font-family", "sans-serif")
-      .style("font-size", "11px");;
+      .style("font-size", "11px")
+      .attr('class', 'text__white');
 
     // svg.selectAll("rect")
     //   .data(data)
